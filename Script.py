@@ -6,7 +6,7 @@ class script(object):
 𝙈𝘼𝙉𝙄𝙏𝘼𝙄𝙉𝙀𝘿 𝘽𝙔 - @Vaarasudu_vt"""
     HELP_TXT = """𝙃𝙀𝙔 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
+    ABOUT_TXT = """✯ 𝙈𝙔 𝙉𝘼𝙈𝙀: {}
 ✯ 𝘾𝙍𝙀𝘼𝙏𝙊𝙍: <a href=https://t.me/vaarasudu_vt>𝙑𝘼𝘼𝙍𝘼𝙎𝙐𝘿𝙐</a>
 ✯ 𝙇𝙄𝘽𝙍𝘼𝙍𝙔: 𝙋𝙔𝙍𝙊𝙂𝙍𝘼𝙈
 ✯ 𝙇𝘼𝙉𝙂𝙐𝘼𝙂𝙀: 𝙋𝙔𝙏𝙃𝙊𝙉 
