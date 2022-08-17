@@ -11,8 +11,8 @@ class script(object):
 ✯ 𝘽𝙊𝙏 𝙎𝙀𝙍𝙑𝙀𝙍: 𝙑𝘼𝘼𝙍𝘼𝙎𝙐𝘿𝙐
 ✯ 𝘽𝙐𝙄𝙇𝘿 𝙎𝙏𝘼𝙏𝙐𝙎: v4.3.9 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Its not an open source project. 
-- Source - https://t.me/vaarasudu_vt
+- Its not an open Source bot. 
+- Made By - https://t.me/vaarasudu_vt
 
 <b>DEVS:</b>
 - <a href=https://t.me/vaarasudu_vt>vaarasudu</a>"""
