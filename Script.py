@@ -2,23 +2,22 @@ class script(object):
     START_TXT = """𝙃𝙀𝙇𝙇𝙊 {},
 𝙈𝙔 𝙉𝘼𝙈𝙀 𝙄𝙎 <a href=https://t.me/{}>{}</a>, ✨ 𝙄 𝘾𝘼𝙉 𝙋𝙍𝙊𝙑𝙄𝘿𝙀 𝙈𝙊𝙑𝙄𝙀𝙎 & 𝙎𝙀𝙍𝙄𝙀𝙎, 𝙅𝙐𝙎𝙏 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋 & 𝙀𝙉𝙅𝙊𝙔 ✨ 𝙄𝙁 𝙔𝙊𝙐 𝙒𝘼𝙉𝙏 𝙐𝙎𝙀 𝙈𝙀 𝙏𝙃𝙀𝙉 𝙅𝙊𝙄𝙉 𝙈𝙔 𝙐𝙋𝘿𝘼𝙏𝙀𝙎 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 & 𝙐𝙎𝙀 
 
-𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 - @Infinity_movies2
-𝙈𝘼𝙉𝙄𝙏𝘼𝙄𝙉𝙀𝘿 𝘽𝙔 - @Vaarasudu_vt"""
+𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 - @Infinity_movies2"""
     HELP_TXT = """𝙃𝙀𝙔 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+𝙃𝙀𝙍𝙀 𝙄𝙎 𝙏𝙃𝙄𝙎 𝙏𝙃𝙀 𝙃𝙀𝙇𝙋 𝙁𝙊𝙍 𝙈𝙔 𝘾𝙊𝙉𝙈𝘼𝙉𝘿𝙎."""
     ABOUT_TXT = """✯ 𝙈𝙔 𝙉𝘼𝙈𝙀: {}
-✯ 𝘾𝙍𝙀𝘼𝙏𝙊𝙍: <a href=https://t.me/vaarasudu_vt>𝙑𝘼𝘼𝙍𝘼𝙎𝙐𝘿𝙐</a>
+✯ 𝘾𝙍𝙀𝘼𝙏𝙊𝙍: <a href=https://t.me/infinity_novies2>𝙄𝙉𝙁𝙄𝙉𝙄𝙏𝙔 𝙈𝙊𝙑𝙄𝙀𝙎</a>
 ✯ 𝙇𝙄𝘽𝙍𝘼𝙍𝙔: 𝙋𝙔𝙍𝙊𝙂𝙍𝘼𝙈
 ✯ 𝙇𝘼𝙉𝙂𝙐𝘼𝙂𝙀: 𝙋𝙔𝙏𝙃𝙊𝙉 
 ✯ 𝘿𝘼𝙏𝘼 𝘽𝘼𝙎𝙀: 𝙄𝙉𝙁𝙄𝙉𝙄𝙏𝙔 𝙈𝙊𝙑𝙄𝙀𝙎
-✯ 𝘽𝙊𝙏 𝙎𝙀𝙍𝙑𝙀𝙍: 𝙑𝘼𝘼𝙍𝘼𝙎𝙐𝘿𝙐
+✯ 𝘽𝙊𝙏 𝙎𝙀𝙍𝙑𝙀𝙍: 𝙊𝘾𝙀𝘼𝙉 𝙑𝙋𝙎
 ✯ 𝘽𝙐𝙄𝙇𝘿 𝙎𝙏𝘼𝙏𝙐𝙎: v4.3.9"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Its not an open Source bot. 
-- Made By - @vaarasudu_vt
+- Made By - @INFIINITY_MOVIES2
 
 <b>DEVS:</b>
-- <a href=https://t.me/vaarasudu_vt>vaarasudu</a>"""
+- <a href=https://t.me/infinity_movies2>INFINITY MOVIES</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Bot will respond whenever a keyword is found the message
@@ -43,7 +42,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/Vaarasudu_vt)</code>
+<code>[Button Text](buttonurl:https://t.me/infinity_movies2)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
