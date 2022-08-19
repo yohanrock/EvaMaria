@@ -157,20 +157,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('Processing...')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('Processing...')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Processing...')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Vaarasudu_vt'), 
+            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'), 
             InlineKeyboardButton('👥 𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝘾𝙃𝘼𝙏', url='https://t.me/Infinitymoviesgroup')
         ], [
             InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', callback_data='help'),
@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('Processing...')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝙈𝘼𝙉𝙐𝘼𝙇 𝙁𝙄𝙇𝙏𝙀𝙍', callback_data='manuelfilter'),
@@ -439,7 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/vaarasudu_vt'),
+            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'),
             InlineKeyboardButton('💙 𝙎𝙊𝙐𝙍𝘾𝙀', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 𝙃𝙊𝙈𝙀', callback_data='start'),
