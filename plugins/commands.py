@@ -18,6 +18,8 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
+DELETE_TIMER = int(os.environ.get('DELETE_TIMER', '400'))
+
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -225,7 +227,9 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
-            await msg.edit_caption(f_caption)
+            await msg.edit_caption(f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So saved the message to your saved messages.")
+            await asyncio.sleep(DELETE_TIMER)
+            await msg.delete()
             return
         except:
             pass
@@ -242,12 +246,14 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    await client.send_cached_media(
+    feck=await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
-        caption=f_caption,
+        caption=f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So saved the message to your saved messages.",
         protect_content=True if pre == 'filep' else False,
         )
+    await asyncio.sleep(DELETE_TIMER)
+    await feck.delete()
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
