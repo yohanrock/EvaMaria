@@ -362,7 +362,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 feck = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So saved the message to your saved messages.",
+                    caption=f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So forward to your saved messages.",
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
