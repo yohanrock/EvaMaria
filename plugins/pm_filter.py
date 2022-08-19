@@ -1,6 +1,6 @@
 # Kanged From @TroJanZheX
 import asyncio
-import re
+import re, os
 import ast
 import math
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
@@ -29,6 +29,7 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
+DELETE_TIMER = int(os.environ.get('DELETE_TIMER', '400'))
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -358,13 +359,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             else:
-                await client.send_cached_media(
+                feck = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption,
+                    caption=f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So saved the message to your saved messages.",
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
+                await asyncio.sleep(DELETE_TIMER)
+                await feck.delete()
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -394,12 +397,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         await query.answer()
-        await client.send_cached_media(
+        feck = await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption,
+            caption=f_caption+f"\nThis file will be deleted in {DELETE_TIMER/60} minutes. So saved the message to your saved messages.",
             protect_content=True if ident == 'checksubp' else False
         )
+        await asyncio.sleep(DELETE_TIMER)
+        await feck.delete()
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
