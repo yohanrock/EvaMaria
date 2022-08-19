@@ -30,6 +30,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 DELETE_TIMER = int(os.environ.get('DELETE_TIMER', '400'))
+FILTER_DELETE_TIMER = int(os.environ.get('FILTER_DELETE_TIMER', DELETE_TIMER))
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -719,22 +720,22 @@ async def auto_filter(client, msg, spoll=False):
         try:
             feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`This filter will be deleted in {round(DELETE_TIMER/60)} Minutes.",
                                       reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(DELETE_TIMER)
+            await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             feck = await message.reply_photo(photo=poster, caption=cap[:1024]+f"\n\n`This filter will be deleted in {round(DELETE_TIMER/60)} Minutes.", reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(DELETE_TIMER)
+            await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except Exception as e:
             logger.exception(e)
             feck=await message.reply_text(cap+f"\n\n`This filter will be deleted in {round(DELETE_TIMER/60)} Minutes.", reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(DELETE_TIMER)
+            await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
     else:
         feck=await message.reply_text(cap+f"\n\n`This filter will be deleted in {round(DELETE_TIMER/60)} Minutes.", reply_markup=InlineKeyboardMarkup(btn))
-        await adyncio.sleep(DELETE_TIMER)
+        await adyncio.sleep(FILTER_DELETE_TIMER)
         await feck.delete()
     if spoll:
         await msg.message.delete()
