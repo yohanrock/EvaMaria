@@ -227,7 +227,7 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
-            await msg.edit_caption(f_caption+f"\nThis file will be deleted in {round(DELETE_TIMER/60)} minutes. So saved the message to your saved messages.")
+            await msg.edit_caption(f_caption+f"\nThis file will be deleted in {round(DELETE_TIMER/60)} minutes. So Foward to your saved messages.")
             await asyncio.sleep(DELETE_TIMER)
             await msg.delete()
             return
@@ -249,7 +249,7 @@ async def start(client, message):
     feck=await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
-        caption=f_caption+f"\nThis file will be deleted in {round(DELETE_TIMER/60)} minutes. So saved the message to your saved messages.",
+        caption=f_caption+f"\nThis file will be deleted in {round(DELETE_TIMER/60)} minutes. So Foward to your saved messages.",
         protect_content=True if pre == 'filep' else False,
         )
     await asyncio.sleep(DELETE_TIMER)
