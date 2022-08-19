@@ -14,7 +14,7 @@ class script(object):
 ✯ 𝘽𝙐𝙄𝙇𝘿 𝙎𝙏𝘼𝙏𝙐𝙎: v4.3.9"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Its not an open Source bot. 
-- Made By - @INFIINITY_MOVIES2
+- Made By - @INFINITY_MOVIES2
 
 <b>DEVS:</b>
 - <a href=https://t.me/infinity_movies2>INFINITY MOVIES</a>"""
