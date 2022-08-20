@@ -363,7 +363,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 feck = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption+f"\n⚡ This file will be deleted in {round(DELETE_TIMER/60)} minutes. So forward To Your saved messages ⚡.",
+                    caption=f_caption+f"\n⚡ This File Will Be Deleting In {round(DELETE_TIMER/60)} Minutes. So Forward To Your Saved Messages ⚡.",
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         feck = await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption+f"\n⚡ This file will be deleted in {round(DELETE_TIMER/60)} minutes. So forward To Your saved messages ⚡.",
+            caption=f_caption+f"\n⚡ This File Will Be Deleting In {round(DELETE_TIMER/60)} Minutes. So Forward To Your Saved Messages ⚡.",
             protect_content=True if ident == 'checksubp' else False
         )
         await asyncio.sleep(DELETE_TIMER)
@@ -718,23 +718,23 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`⚡ This Request will be deleted in {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.",
+            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.",
                                       reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            feck = await message.reply_photo(photo=poster, caption=cap[:1024]+f"\n\n`⚡ This Request will be deleted in {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+            feck = await message.reply_photo(photo=poster, caption=cap[:1024]+f"\n\n`⚡ Your Request will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except Exception as e:
             logger.exception(e)
-            feck=await message.reply_text(cap+f"\n\n`⚡ This Request will be deleted in {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+            feck=await message.reply_text(cap+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
     else:
-        feck=await message.reply_text(cap+f"\n\n`⚡ This Request will be deleted in {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+        feck=await message.reply_text(cap+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(FILTER_DELETE_TIMER)
         await feck.delete()
     if spoll:
