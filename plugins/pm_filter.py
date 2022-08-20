@@ -718,7 +718,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`This filter will be deleted in {round(DELETE_TIMER/60)} Minutes.",
+            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`This Request will be deleted in {round(DELETE_TIMER/60)} Minutes.",
                                       reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
