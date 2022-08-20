@@ -735,7 +735,7 @@ async def auto_filter(client, msg, spoll=False):
             await feck.delete()
     else:
         feck=await message.reply_text(cap+f"\n\n`This Request will be deleted in {round(DELETE_TIMER/60)} Minutes.", reply_markup=InlineKeyboardMarkup(btn))
-        await adyncio.sleep(FILTER_DELETE_TIMER)
+        await asyncio.sleep(FILTER_DELETE_TIMER)
         await feck.delete()
     if spoll:
         await msg.message.delete()
