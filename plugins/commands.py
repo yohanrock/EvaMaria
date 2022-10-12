@@ -99,8 +99,6 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', callback_data='help'),
             InlineKeyboardButton('😊 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
-            ],[
-            InlineKeyboardButton('⚡ 𝙊𝙉𝙇𝙄𝙉𝙀 𝙎𝙏𝙍𝙀𝘼𝙈𝙄𝙉𝙂', url='https://telegra.ph/Online-Streaming-Movies-08-25')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
