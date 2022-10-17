@@ -93,7 +93,7 @@ This Commands Only Works For My Admins
 • /unban  - <code>to unban a user.</code>
 • /channel - <code>to get list of total connected channels</code>
 • /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """🗃 𝙏𝙊𝙏𝘼𝙇 𝙁𝙄𝙇𝙀𝙎: <code>{}</code>
+    STATUS_TXT = """🗃 𝗧𝗢𝗧𝗔𝗟 𝗙𝗜𝗟𝗘𝗦: <code>{}</code>
 👤 𝗧𝗢𝗧𝗔𝗟 𝗨𝗦𝗘𝗥𝗦: <code>{}</code>
 👥 𝗧𝗢𝗧𝗔𝗟 𝗖𝗛𝗔𝗧𝗦: <code>{}</code>
 💾 𝗨𝗦𝗘𝗗 𝗦𝗣𝗔𝗖𝗘: <code>{}</code> GB
