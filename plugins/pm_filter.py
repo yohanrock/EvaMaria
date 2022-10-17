@@ -715,7 +715,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"𝗛𝗲𝗿𝗲 𝗶𝘀 𝘄𝗵𝗮𝘁 𝗶 𝗳𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝘆𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 {search}"
     if imdb and imdb.get('poster'):
         try:
             feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.",
