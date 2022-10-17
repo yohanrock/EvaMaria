@@ -718,14 +718,14 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"𝗛𝗲𝗿𝗲 𝗶𝘀 𝘄𝗵𝗮𝘁 𝗶 𝗳𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝘆𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 {search}"
     if imdb and imdb.get('poster'):
         try:
-            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.",
+            feck = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024]+f"\n\n`⚡ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗜𝗻 {round(FILTER_DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀 ⚡.",
                                       reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            feck = await message.reply_photo(photo=poster, caption=cap[:1024]+f"\n\n`⚡ Your Request will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+            feck = await message.reply_photo(photo=poster, caption=cap[:1024]+f"\n\n`⚡ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝘄𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗜𝗻 {round(FILTER_DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀 ⚡.", reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
         except Exception as e:
@@ -750,7 +750,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗺𝗼𝘃𝗶𝗲 𝗶𝗻 𝘁𝗵𝗮𝘁 𝗻𝗮𝗺𝗲.")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -779,7 +779,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴")
         await asyncio.sleep(8)
         await k.delete()
         return
