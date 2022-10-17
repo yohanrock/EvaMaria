@@ -363,7 +363,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 feck = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption+f"\n⚡ This File Will Be Deleting In {round(DELETE_TIMER/60)} Minutes. So Forward To Your Saved Messages ⚡.",
+                    caption=f_caption+f"\n⚡ 𝗧𝗵𝗶𝘀 𝗙𝗶𝗹𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗶𝗻 {round(DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 𝗦𝗼 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗦𝗮𝘃𝗲𝗱 𝗠𝗮𝘀𝘀𝗮𝗴𝗲𝘀 ⚡.",
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         feck = await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption+f"\n⚡ This File Will Be Deleting In {round(DELETE_TIMER/60)} Minutes. So Forward To Your Saved Messages ⚡.",
+            caption=f_caption+f"\n⚡ 𝗧𝗵𝗶𝘀 𝗙𝗶𝗹𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗜𝗻 {round(DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 𝗦𝗼 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗦𝗮𝘃𝗲𝗱 𝗠𝗲𝘀𝘀𝗮𝗴𝗲𝘀 ⚡.",
             protect_content=True if ident == 'checksubp' else False
         )
         await asyncio.sleep(DELETE_TIMER)
@@ -730,11 +730,11 @@ async def auto_filter(client, msg, spoll=False):
             await feck.delete()
         except Exception as e:
             logger.exception(e)
-            feck=await message.reply_text(cap+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+            feck=await message.reply_text(cap+f"\n\n`⚡ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗜𝗻 {round(FILTER_DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀 ⚡.", reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(FILTER_DELETE_TIMER)
             await feck.delete()
     else:
-        feck=await message.reply_text(cap+f"\n\n`⚡ Your Request Will Be Deleting In {round(FILTER_DELETE_TIMER/60)} Minutes ⚡.", reply_markup=InlineKeyboardMarkup(btn))
+        feck=await message.reply_text(cap+f"\n\n`⚡ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗜𝗻 {round(FILTER_DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀 ⚡.", reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(FILTER_DELETE_TIMER)
         await feck.delete()
     if spoll:
