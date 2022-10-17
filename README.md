@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="Yohan Rockstar Logo">
+  <img src="assets/logo.jpg" alt="Yohan Rockstar">
 </p>
 <h1 align="center">
   <b>Infinity_Movies2Bot</b>
