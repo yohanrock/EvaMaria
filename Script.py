@@ -53,7 +53,7 @@ class script(object):
 2. Make sure that your channel does not contains camrips, porn and fake files.
 3. Forward the last message to Bot with quotes.
  I'll add all the files in that channel to my db."""
-    CONNECTION_TXT = """Help: <b>𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡𝗦</b>
+    CONNECTION_TXT = """Help: <b>𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡</b>
 
 - Used to connect bot to PM for managing filters 
 - it helps to avoid spamming in groups.
@@ -66,7 +66,7 @@ class script(object):
 • /connect  - <code>connect a particular chat to your PM</code>
 • /disconnect  - <code>disconnect from a chat</code>
 • /connections - <code>list all your connections</code>"""
-    EXTRAMOD_TXT = """Help: <b>𝙀𝙓𝙏𝙍𝘼 𝙈𝙊𝘿𝙐𝙇𝙀𝙎</b>
+    EXTRAMOD_TXT = """Help: <b>𝗘𝗫𝗧𝗥𝗔 𝗠𝗢𝗗𝗨𝗟𝗘𝗦</b>
 
 <b>𝗡𝗢𝗧𝗘:</b>
 These are the extra features of Bot
