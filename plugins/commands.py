@@ -25,10 +25,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/infinity_movies2')
+                InlineKeyboardButton('🤖 𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url='https://t.me/infinity_movies2')
             ],
             [
-                InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ℹ️ 𝗛𝗘𝗟𝗣', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -44,14 +44,14 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'), 
-            InlineKeyboardButton('👥 𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝘾𝙃𝘼𝙏', url='https://t.me/Infinitymoviesgroup')
+            InlineKeyboardButton('🔍 𝗦𝗘𝗔𝗥𝗖𝗛', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url='https://t.me/Infinity_movies2'), 
+            InlineKeyboardButton('👥 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧', url='https://t.me/Infinitymoviesgroup')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', callback_data='help'),
-            InlineKeyboardButton('😊 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝗛𝗘𝗟𝗣', callback_data='help'),
+            InlineKeyboardButton('😊 𝗔𝗕𝗢𝗨𝗧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -79,26 +79,26 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 𝙏𝙍𝙔 𝘼𝙂𝘼𝙄𝙉", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 𝙏𝙍𝙔 𝘼𝙂𝘼𝙄𝙉", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**𝙋𝙇𝙀𝘼𝙎𝙀 𝙅𝙊𝙄𝙉 𝙈𝙔 𝙐𝙋𝘿𝘼𝙏𝙀𝙎 𝙏𝙊 𝙐𝙎𝙀 𝙈𝙀!**",
+            text="**𝗣𝗟𝗘𝗔𝗦𝗘 𝗝𝗢𝗜𝗡 𝗠𝗬 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 𝗧𝗢 𝗨𝗦𝗘 𝗠𝗘!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'), 
-            InlineKeyboardButton('👥 𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝘾𝙃𝘼𝙏', url='https://t.me/Infinitymoviesgroup')
+            InlineKeyboardButton('🔍 𝗦𝗘𝗔𝗥𝗖𝗛', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url='https://t.me/Infinity_movies2'), 
+            InlineKeyboardButton('👥 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧', url='https://t.me/Infinitymoviesgroup')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', callback_data='help'),
-            InlineKeyboardButton('😊 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝗛𝗘𝗟𝗣', callback_data='help'),
+            InlineKeyboardButton('😊 𝗔𝗕𝗢𝗨𝗧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -351,12 +351,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="𝙔𝙀𝙎", callback_data="autofilter_delete"
+                        text="𝗬𝗘𝗦", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="𝘾𝘼𝙉𝘾𝙀𝙇", callback_data="close_data"
+                        text="𝗖𝗔𝗡𝗖𝗘𝗟", callback_data="close_data"
                     )
                 ],
             ]
