@@ -2,10 +2,10 @@ class script(object):
     START_TXT = """𝗛𝗲𝗹𝗹𝗼 <b>{}</b>,
 𝗠𝗬 𝗡𝗔𝗠𝗘 <a href=https://t.me/infinity_movies2bot>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>, ✨ 𝗜 𝗖𝗔𝗡 𝗣𝗥𝗢𝗩𝗜𝗗𝗘 𝗠𝗢𝗩𝗜𝗘𝗦 & 𝗦𝗘𝗥𝗜𝗘𝗦, 𝗝𝗨𝗦𝗧 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 & 𝗚𝗥𝗢𝗨𝗣 ✨ 𝗜𝗙 𝗬𝗢𝗨 𝗪𝗔𝗡𝗧 𝗨𝗦𝗘 𝗠𝗘 𝗧𝗛𝗘𝗡 𝗝𝗢𝗜𝗡 𝗠𝗬 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 & 𝗖𝗟𝗜𝗖𝗞 𝗢𝗡 𝗦𝗘𝗔𝗥𝗖𝗛 ⚡✨
 
-𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 - @Infinity_movies2"""
+𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 - <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>"""
     HELP_TXT = """𝗛𝗘𝗬 <b>{}</b>
 𝗛𝗘𝗥𝗘 𝗜𝗦 𝗧𝗛𝗘 𝗛𝗘𝗟𝗣 𝗙𝗢𝗥 𝗠𝗬 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦."""
-    ABOUT_TXT = """✯ 𝗠𝗬 𝗡𝗔𝗠𝗘 : <b>{}</b>
+    ABOUT_TXT = """✯ 𝗠𝗬 𝗡𝗔𝗠𝗘 : <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
 ✯ 𝗖𝗥𝗘𝗔𝗧𝗢𝗥: <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
 ✯ 𝗟𝗜𝗕𝗥𝗔𝗥𝗬: 𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠
 ✯ 𝗟𝗔𝗡𝗚𝗨𝗔𝗚𝗘: 𝗣𝗬𝗧𝗛𝗢𝗡
@@ -14,10 +14,10 @@ class script(object):
 ✯ 𝗕𝗨𝗜𝗟𝗗 𝗦𝗧𝗔𝗧𝗨𝗦: 𝗩𝟭.𝟮.𝟰"""
     SOURCE_TXT = """<b>𝗡𝗢𝗧𝗘:</b>
 - Its not an open Source bot. 
-- 𝗠𝗔𝗗𝗘 𝗕𝗬 - @INFINITY_MOVIES2
+- 𝗠𝗔𝗗𝗘 𝗕𝗬 - <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
 
 <b>𝗗𝗘𝗩𝗦:</b>
-- <a href=https://t.me/infinity_movies2>INFINITY MOVIES</a>"""
+- <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>"""
     MANUELFILTER_TXT = """Help: <b>𝗙𝗜𝗟𝗧𝗘𝗥𝗦</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Bot will respond whenever a keyword is found the message
