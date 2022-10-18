@@ -5,7 +5,7 @@ class script(object):
 𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 - <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>"""
     HELP_TXT = """𝗛𝗘𝗬 <b>{}</b>
 𝗛𝗘𝗥𝗘 𝗜𝗦 𝗧𝗛𝗘 𝗛𝗘𝗟𝗣 𝗙𝗢𝗥 𝗠𝗬 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦."""
-    ABOUT_TXT = """✯ 𝗠𝗬 𝗡𝗔𝗠𝗘 : <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
+    ABOUT_TXT = """✯ 𝗠𝗬 𝗡𝗔𝗠𝗘 : <a href=https://t.me/infinity_movies2bot>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
 ✯ 𝗖𝗥𝗘𝗔𝗧𝗢𝗥: <a href=https://t.me/infinity_movies2>𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗢𝗩𝗜𝗘𝗦</a>
 ✯ 𝗟𝗜𝗕𝗥𝗔𝗥𝗬: 𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠
 ✯ 𝗟𝗔𝗡𝗚𝗨𝗔𝗚𝗘: 𝗣𝗬𝗧𝗛𝗢𝗡
