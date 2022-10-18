@@ -363,7 +363,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 feck = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption+f"\n⚡ 𝗧𝗵𝗶𝘀 𝗙𝗶𝗹𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗶𝗻 {round(DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 𝗦𝗼 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗦𝗮𝘃𝗲𝗱 𝗠𝗮𝘀𝘀𝗮𝗴𝗲𝘀 ⚡.",
+                    caption=f_caption+f"\n⚡ 𝗧𝗵𝗶𝘀 𝗙𝗶𝗹𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗗𝗲𝗹𝗲𝘁𝗶𝗻𝗴 𝗶𝗻 {round(DELETE_TIMER/60)} 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 𝗦𝗼 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗦𝗮𝘃𝗲𝗱 𝗠𝗲𝘀𝘀𝗮𝗴𝗲𝘀 ⚡.",
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
@@ -410,14 +410,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'), 
-            InlineKeyboardButton('👥 𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝘾𝙃𝘼𝙏', url='https://t.me/Infinitymoviesgroup')
+            InlineKeyboardButton('🔍 𝗦𝗘𝗔𝗥𝗖𝗛', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url='https://t.me/Infinity_movies2'), 
+            InlineKeyboardButton('👥 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧', url='https://t.me/Infinitymoviesgroup')
         ], [
-            InlineKeyboardButton('ℹ️ 𝙃𝙀𝙇𝙋', callback_data='help'),
-            InlineKeyboardButton('😊 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝗛𝗘𝗟𝗣', callback_data='help'),
+            InlineKeyboardButton('😊 𝗔𝗕𝗢𝗨𝗧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -428,14 +428,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Processing...')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('𝙈𝘼𝙉𝙐𝘼𝙇 𝙁𝙄𝙇𝙏𝙀𝙍', callback_data='manuelfilter'),
-            InlineKeyboardButton('𝘼𝙐𝙏𝙊 𝙁𝙄𝙇𝙏𝙀𝙍', callback_data='autofilter')
+            InlineKeyboardButton('𝗠𝗔𝗡𝗨𝗔𝗟 𝗙𝗜𝗟𝗧𝗘𝗥', callback_data='manuelfilter'),
+            InlineKeyboardButton('𝗔𝗨𝗧𝗢 𝗙𝗜𝗟𝗧𝗘𝗥', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙄𝙊𝙉', callback_data='coct'),
-            InlineKeyboardButton('𝙀𝙓𝙏𝙍𝘼 𝙈𝙊𝘿𝙎', callback_data='extra')
+            InlineKeyboardButton('𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡', callback_data='coct'),
+            InlineKeyboardButton('𝗘𝗫𝗧𝗥𝗔 𝗠𝗢𝗗𝗦', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 𝙃𝙊𝙈𝙀', callback_data='start'),
-            InlineKeyboardButton('🔮 𝙎𝙏𝘼𝙏𝙐𝙎', callback_data='stats')
+            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
+            InlineKeyboardButton('🔮 𝗦𝗧𝗔𝗧𝗨𝗦', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -445,11 +445,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/Infinity_movies2'),
-            InlineKeyboardButton('💙 𝙎𝙊𝙐𝙍𝘾𝙀', callback_data='source')
+            InlineKeyboardButton('🤖 𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url='https://t.me/Infinity_movies2'),
+            InlineKeyboardButton('💙 𝗦𝗢𝗨𝗥𝗖𝗘', callback_data='source')
         ], [
-            InlineKeyboardButton('🏠 𝙃𝙊𝙈𝙀', callback_data='start'),
-            InlineKeyboardButton('🔐 𝘾𝙇𝙊𝙎𝙀', callback_data='close_data')
+            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
+            InlineKeyboardButton('🔐 𝗖𝗟𝗢𝗦𝗘', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='about')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -469,8 +469,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "manuelfilter":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help'),
-            InlineKeyboardButton('⏹️ 𝘽𝙐𝙏𝙏𝙊𝙉𝙎', callback_data='button')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help'),
+            InlineKeyboardButton('⏹️ 𝗕𝗨𝗧𝗧𝗢𝗡𝗦', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -480,7 +480,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "button":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='manuelfilter')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='manuelfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -490,7 +490,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -500,7 +500,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "coct":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -510,8 +510,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help'),
-            InlineKeyboardButton('👮‍♂️ 𝘼𝘿𝙈𝙄𝙉', callback_data='admin')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help'),
+            InlineKeyboardButton('👮‍♂️ 𝗔𝗗𝗠𝗜𝗡', callback_data='admin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -521,7 +521,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='extra')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='extra')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -531,8 +531,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help'),
-            InlineKeyboardButton('♻️ 𝙍𝙀𝙁𝙍𝙀𝙎𝙃', callback_data='rfrsh')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help'),
+            InlineKeyboardButton('♻️ 𝗥𝗘𝗙𝗥𝗘𝗦𝗛', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -550,8 +550,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rfrsh":
         await query.answer("Fetching MongoDb DataBase")
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝘽𝘼𝘾𝙆', callback_data='help'),
-            InlineKeyboardButton('♻️ 𝙍𝙀𝙁𝙍𝙀𝙎𝙃', callback_data='rfrsh')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help'),
+            InlineKeyboardButton('♻️ 𝗥𝗘𝗙𝗥𝗘𝗦𝗛', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
